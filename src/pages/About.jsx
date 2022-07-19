@@ -1,22 +1,14 @@
 import React from 'react'
 import { about } from '../textContent';
-
-// function About() {
-//   return (
-//     <div className='w-screen h-screen p-8'>
-//       <div className='ma max-w-5xl h-full bg-slate-300 mx-auto'></div>
-//     </div>
-//   )
-// }
-
-// export default About
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from 'react';
+import { MdOutlineArrowForwardIos } from 'react-icons/md'
 
 const Accordion = ({ id, expanded, setExpanded }) => {
   const isOpen = id === expanded;
+
+  const isOpenColor = "linear-gradient(90deg, #C292DE 11.26%, #67B3E4 90.04%)"
 
   useEffect(() => {
     if(id === 0){
@@ -24,14 +16,12 @@ const Accordion = ({ id, expanded, setExpanded }) => {
     }
   }, [])
 
-  // By using `AnimatePresence` to mount and unmount the contents, we can animate
-  // them in and out while also only rendering the contents of open accordions
   return (
     <div className='max-w-xl m-auto'>
       <motion.header
-        className='p-3 rounded-md m-2 w-full'
-        initial={false}
-        animate={{ backgroundColor: isOpen ? "#FF0088" : "#0055FF" }}
+        className={isOpen ? 'p-3 rounded-md m-2 w-full openHead' : 'p-3 rounded-md m-2 w-full closeHead'}
+        // initial={false}
+        // animate={{ background: isOpen ? isOpenColor : "#0055FF" }}
         onClick={() => setExpanded(isOpen ? false : id)}
       >
         {about[id].question}
@@ -69,10 +59,12 @@ export default function About(){
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className='w-screen h-screen p-8 md:p-16'>
-      <h1 className='text-[24px] md:text-[36px] mb-6'>About Me</h1>
+    <div id='about' className='w-screen h-screen p-8 md:p-16'>
+      <div className='flex'>
+        <h1 className='text-[24px] md:text-[36px] mb-6 border-b-4'>About Me</h1>
+      </div>
       {accordionIds.map((id) => (
-        <Accordion id={id} expanded={expanded} setExpanded={setExpanded} />
+        <Accordion id={id} key={id} expanded={expanded} setExpanded={setExpanded} />
       ))}
     </div>
   );

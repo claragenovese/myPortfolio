@@ -2,7 +2,7 @@ import React from 'react'
 
 function Projects() {
   return (
-    <div className='w-screen h-screen'>Projects</div>
+    <div id='projects' className='w-screen h-screen'>Projects</div>
   )
 }
 

@@ -3,12 +3,13 @@ import React from 'react'
 import Typed from 'react-typed';
 import { motion } from 'framer-motion'
 import { MdOutlineArrowForwardIos } from 'react-icons/md'
+import { Link } from 'react-scroll';
 
 //si tengo mas de una animación 3d puedo hacer del canvas un componente 
 
 function Home() {
   return (
-    <div className='w-screen h-screen flex flex-col items-center justify-center p-10' >
+    <div id="home" className='w-screen h-screen flex flex-col items-center justify-center p-10' >
       <motion.div 
         initial={{ opacity: 0}}
         animate={{ opacity: 1}}
@@ -16,7 +17,7 @@ function Home() {
         className='text-red relative z-10'
       >
         <h1 className='text-white font-normal text-[50px] text-center'>
-          Hi, I'm <span className=' text-purple-300 font-semibold subpixel-antialiased'>Clara Genovese</span>
+          Hi, I'm <span className=' text-purple-300 font-semibold subpixel-antialiased'>Clara</span>
           <br />
           <Typed
               strings={["Front-End Developer"]}
@@ -26,7 +27,9 @@ function Home() {
       </motion.div>
       {/* <Sphere /> */}
       <div className='absolute  bottom-10 animate-arrow'>
-        <MdOutlineArrowForwardIos className='rotate-90 scale-[2]'/>
+        <Link to='about' smooth={true} duration={500}>
+          <MdOutlineArrowForwardIos className='rotate-90 scale-[2]'/>
+        </Link>
       </div>
     </div>
   )

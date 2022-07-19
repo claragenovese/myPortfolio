@@ -2,7 +2,7 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div className='w-screen h-screen'>Contact</div>
+    <div id='contact' className='w-screen h-screen'>Contact</div>
   )
 }
 
