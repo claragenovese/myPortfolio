@@ -23,3 +23,34 @@ export const mensajeCallToAction = "Join me to this travel. Who told you tah dre
 export const mensajeCallToActionDesclaimer = "Dreams: have awesome smooth scalable optimized web sites"
 export const mensajeCallToAction2 = "You are at just one message of became your project expectations a fact"
 export const mensajeContactMe = "Contact me if you are interested in my work, of even if you only want to talk about this awesome world that is the programetion. I enjoy that conversations too!"
+
+export const projectsContent = [
+    {
+        name: "Netflix Clone",
+        description: "lalalalalal",
+        bannerImg: "src/assets/netflix-banner-min.jpg",
+        slideImgs: [
+            "src/assets/netflix-img1-min.jpg", 
+            "src/assets/netflix-img2-min.jpg", 
+            "src/assets/netflix-img3-min.jpg",
+            "src/assets/netflix-img4-min.jpg"
+        ],
+        deployUrl: "fir-netflix-970a4.web.app/",
+        repo: "https://github.com/claragenovese/Netflix-Clone",
+        id: 1,
+    },
+    {
+        name: "Weather App",
+        description: "lalalalalal",
+        bannerImg: "src/assets/netflix-banner-min.jpg",
+        slideImgs: [
+            "src/assets/netflix-img1-min.jpg", 
+            "src/assets/netflix-img2-min.jpg", 
+            "src/assets/netflix-img3-min.jpg",
+            "src/assets/netflix-img4-min.jpg"
+        ],
+        deployUrl: "fir-netflix-970a4.web.app/",
+        repo: "https://github.com/claragenovese/Netflix-Clone",
+        id: 2,
+    },
+]

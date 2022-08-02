@@ -9,14 +9,14 @@ import { Link } from 'react-scroll';
 
 function Home() {
   return (
-    <div id="home" className='w-screen h-screen flex flex-col items-center justify-center p-10' >
+    <div id="home" className='relative w-screen h-screen flex flex-col items-center justify-center p-10' >
       <motion.div 
         initial={{ opacity: 0}}
         animate={{ opacity: 1}}
         transition={{ duration: 3, delay: 0.3 }}
-        className='text-red relative z-10'
+        className='text-red relative z-10 center-element'
       >
-        <h1 className='text-white font-normal text-[50px] text-center'>
+        <h1 className='font-normal text-[50px] text-center'>
           Hi, I'm <span className=' text-purple-300 font-semibold subpixel-antialiased'>Clara</span>
           <br />
           <Typed

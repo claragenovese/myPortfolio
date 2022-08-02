@@ -19,13 +19,13 @@ function Nav() {
 
   return (
     <nav className='fixed w-full z-50 px-8 py-4 flex justify-between items-center'>
-      <img 
+      {/* <img 
         className='w-[100px] aspect-{1.3}'
-        src='../src/assets/Claralogo.png' 
-        alt='Clara Logo'/>
-      
+        src='../src/assets/Uonlogo.png' 
+        alt='Clara Logo'/> */}
+      <div>CG</div>
       <motion.ul 
-        className="nav-list hidden lg:flex ml-auto gap-10 text-md	"
+        className="nav-list hidden lg:flex ml-auto gap-10 text-[14px]"
         variants={variants}
       >
         <Link to="home" smooth={true} duration={500} offset={-30}><li>Home</li></Link>
@@ -40,8 +40,8 @@ function Nav() {
       </div>
 
       {/* Mobile ul starts here */}
-      <div className={`block lg:hidden absolute -z-10 top-0 right-[-100%] w-screen sm:w-[400px] h-screen bg-slate-500 transition-all 
-      ${isNavOpen ? "right-0" : ""}
+      <div className={`block lg:hidden absolute -z-10 top-0 right-[-110%] w-screen sm:w-[400px] h-screen bg-slate-500 transition-all 
+      ${isNavOpen ? "right-[0%]" : ""}
       
       `}> 
         <motion.ul 

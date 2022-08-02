@@ -7,15 +7,15 @@ import { OrbitControls, GradientTexture, Edges } from '@react-three/drei'
 function Sphere() {
   return (
     <motion.div 
-      className='md:w-1/2 h-full center-sphere z-0'
-      initial={{ opacity: 0,}}
-      animate={{ opacity: 1,}}
-      transition={{ ease: "easeOut", duration: 0.2, delay: 1 }}
-      
+      className='w-full lg:w-1/2 h-full center-element z-0'
+      // initial={{ scale: 0.3,}}
+      // animate={{ scale: 1, rotate: 360}}
+      // transition={{ ease: "easeOut", duration: 0.2, delay: 1 }}
     >
       <Canvas
+        
       >
-        <mesh scale={0.9} castShadow='true'>
+        <mesh scale={0.95} castShadow='true'>
           <sphereGeometry args={[2.5, 11, 6]}/>
           <meshBasicMaterial wireframe>
             <GradientTexture
