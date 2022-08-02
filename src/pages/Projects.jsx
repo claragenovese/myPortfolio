@@ -2,6 +2,18 @@ import React, {useState} from 'react'
 import {projectsContent} from '../textContent'
 import {motion, AnimatePresence} from 'framer-motion'
 import EachProjectComponent from '../components/EachProjectComponent'
+import SectionTitle from '../components/SectionTitle'
+import { secondContainer } from '../animationVariants'
+
+const firstContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      // delayChildren: 0.5,
+      staggerChildren: 1
+    }
+  }
+}
 
 function Projects() {
 
@@ -9,22 +21,23 @@ function Projects() {
     <EachProjectComponent key={project.id} project={project}/>
   ))
 
-
   return (
-    <div id='projects' 
+    <motion.div id='projects' 
+        variants={firstContainer}
+        initial="hidden"
+        animate="visible"
       className={`w-screen h-screen p-8 md:p-16`}>
-      
-      <div className='flex justify-center'>
-        <h1 className='text-[14px] md:text-[26px] tracking-[5px] mb-6 border-b-2'>MY PROJECTS</h1>
-      </div>
-      <div>
+      <SectionTitle sectionTitle={"My projects"} />
+      <motion.div
+        variants={secondContainer}
+      >
         <div id='prjects-container'
           className='flex items-center justify-center flex-col md:flex-row relative'
         >
           {allProjects}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 

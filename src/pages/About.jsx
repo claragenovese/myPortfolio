@@ -3,37 +3,24 @@ import { about } from '../textContent';
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from 'react';
-import { MdOutlineArrowForwardIos } from 'react-icons/md'
+import SectionTitle from '../components/SectionTitle';
+import { firstContainer, secondContainer, item } from '../animationVariants';
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2
-    }
-  }
-};
-
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1
-  }
-};
 
 const Accordion = ({ id, expanded, setExpanded }) => {
   const isOpen = id === expanded;
+  const staggerAnimationsEnd = 2000
+
+  const openFirstHead = () => {
+    if(id === 0){
+      setExpanded(id)
+    }
+  }
 
   useEffect(() => {
     setTimeout(() => {
-      if(id === 0){
-        setExpanded(id)
-      }
-    }, [1000])
+      openFirstHead()
+    }, [staggerAnimationsEnd])
   }, [])
 
   return (
@@ -79,17 +66,15 @@ export default function About(){
 
   return (
     <div id='about' className='w-screen min-h-screen p-12'>
-      <motion.div className='max-w-[600px] m-auto'>
-        <div className='flex justify-center'>
-          <motion.h1 
-            className='text-[14px] md:text-[26px] tracking-[5px] mb-6 border-b-2'
-          >ABOUT ME</motion.h1>
-        </div>
+      <motion.div 
+        variants={firstContainer}
+        initial="hidden"
+        animate="visible"
+        className='max-w-[600px] m-auto'>
+        <SectionTitle sectionTitle={"About me"} />
         <motion.div 
           className='bg-slate-400/10 p-5 w-full inline-block rounded-md'
-          variants={container}
-          initial="hidden"
-          animate="visible"
+          variants={secondContainer}
         >
           {accordionIds.map((id) => (
           <Accordion id={id} key={id} expanded={expanded} setExpanded={setExpanded} />

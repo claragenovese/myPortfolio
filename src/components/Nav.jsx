@@ -3,15 +3,7 @@ import { Link } from 'react-scroll'
 import { FaBars } from 'react-icons/fa'
 import { IoIosClose } from 'react-icons/io'
 import { motion } from 'framer-motion'
-
-const variants = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 }
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 }
-  }
-};
+import { secondContainer, item } from '../animationVariants'
 
 function Nav() {
   const [isNavOpen, setIsNavOpen] = useState(false)
@@ -19,19 +11,18 @@ function Nav() {
 
   return (
     <nav className='fixed w-full z-50 px-8 py-4 flex justify-between items-center'>
-      {/* <img 
-        className='w-[100px] aspect-{1.3}'
-        src='../src/assets/Uonlogo.png' 
-        alt='Clara Logo'/> */}
+      
       <div>CG</div>
       <motion.ul 
         className="nav-list hidden lg:flex ml-auto gap-10 text-[14px]"
-        variants={variants}
+        variants={secondContainer}
+        initial="hidden"
+        animate="visible"
       >
-        <Link to="home" smooth={true} duration={500} offset={-30}><li>Home</li></Link>
-        <Link to="about" smooth={true} duration={500} offset={-30}><li>About</li></Link>
-        <Link to="projects" smooth={true} duration={500} offset={-30}><li>Projects</li></Link>
-        <Link to="contact" smooth={true} duration={500} offset={-30}><li>Contact</li></Link>
+        <Link to="home" smooth={true} duration={500} offset={-30}><motion.li variants={item}>Home</motion.li></Link>
+        <Link to="about" smooth={true} duration={500} offset={-30}><motion.li variants={item}>About</motion.li></Link>
+        <Link to="projects" smooth={true} duration={500} offset={-30}><motion.li variants={item}>Projects</motion.li></Link>
+        <Link to="contact" smooth={true} duration={500} offset={-30}><motion.li variants={item}>Contact</motion.li></Link>
       </motion.ul>
       <div onClick={() => setIsNavOpen(prev => !prev)}>
         {isNavOpen ?
@@ -46,7 +37,6 @@ function Nav() {
       `}> 
         <motion.ul 
           className="flex flex-col mt-[25%] gap-[15px]"
-          variants={variants}
         >
           <Link to="home" smooth={true} duration={500}><li>Home</li></Link>
           <Link to="about" smooth={true} duration={500}><li>About</li></Link>

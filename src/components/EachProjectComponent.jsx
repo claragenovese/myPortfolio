@@ -1,11 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useIdContext } from '../Context'
+import { item } from '../animationVariants'
 
 function EachProjectComponent({project}) {
   const {handleClick} = useIdContext()
   return (
     <motion.div 
+      variants={item}
       className="w-[300px] h-[170px] md:h-[180px] m-6 md:m-14 
                 relative flex justify-center items-center
                 group"  
