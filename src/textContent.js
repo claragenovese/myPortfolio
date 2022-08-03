@@ -19,6 +19,8 @@ export const about = [
     }
 ]
 
+export const navTopics = ["home", "about", "projects", "contact"]
+
 export const mensajeCallToAction = "Join me to this travel. Who told you tah dreams can't be true"
 export const mensajeCallToActionDesclaimer = "Dreams: have awesome smooth scalable optimized web sites"
 export const mensajeCallToAction2 = "You are at just one message of became your project expectations a fact"

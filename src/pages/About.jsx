@@ -60,16 +60,17 @@ const Accordion = ({ id, expanded, setExpanded }) => {
     </motion.div>
   );
 };
-
+ 
 export default function About(){
   const [expanded, setExpanded] = useState(false);
-
+ 
   return (
     <div id='about' className='w-screen min-h-screen p-12'>
       <motion.div 
         variants={firstContainer}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{once: true, amount: 1}}
         className='max-w-[600px] m-auto'>
         <SectionTitle sectionTitle={"About me"} />
         <motion.div 

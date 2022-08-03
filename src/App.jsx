@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import FixedIcons from './components/FixedIcons'
 import SelectedProject from './components/SelectedProject';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       <About />
       <Projects />
       <Contact /> 
+      <Footer />
       {isScroll && <FixedIcons />}
       <SelectedProject />
     </div>

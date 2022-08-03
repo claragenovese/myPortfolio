@@ -18,7 +18,7 @@ export const subTitle = {
 export const span = {
   hidden: {left: "-100%"},
   visible:{
-      left: "100%",
+      left: "101%",
       transition: {type: "cubic-bezier(0.05, 0.97, 1, 0.07)", duration: 0.6}
   }
 }
@@ -34,10 +34,8 @@ export const firstContainer = {
 }
   
 export const secondContainer = {
-    hidden: { opacity: 1, scale: 0 },
+    hidden: { },
     visible: {
-      opacity: 1,
-      scale: 1,
       transition: {
         delayChildren: 0.3,
         staggerChildren: 0.2

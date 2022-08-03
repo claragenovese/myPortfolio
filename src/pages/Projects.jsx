@@ -22,22 +22,25 @@ function Projects() {
   ))
 
   return (
-    <motion.div id='projects' 
-        variants={firstContainer}
-        initial="hidden"
-        animate="visible"
-      className={`w-screen h-screen p-8 md:p-16`}>
-      <SectionTitle sectionTitle={"My projects"} />
-      <motion.div
-        variants={secondContainer}
-      >
-        <div id='prjects-container'
-          className='flex items-center justify-center flex-col md:flex-row relative'
+    <div className={`w-screen min-h-screen p-12 mb-20`}>
+      <motion.div id='projects' 
+          variants={secondContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, amount: 0.1}}
         >
-          {allProjects}
-        </div>
+        <SectionTitle sectionTitle={"My projects"} />
+        <motion.div
+          variants={secondContainer}
+        >
+          <div id='prjects-container'
+            className='flex items-center justify-center flex-col md:flex-row relative'
+          >
+            {allProjects}
+          </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   )
 }
 
