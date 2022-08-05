@@ -9,7 +9,7 @@ export default function SectionTitle({sectionTitle, titleAnimation}) {
     >
         <motion.h1 
         variants={titleAnimation ?? title}
-        className='text-[14px] md:text-[26px] tracking-[5px] border-b-2 uppercase'
+        className='text-[18px] md:text-[26px] tracking-[5px] border-b-2 uppercase'
         >{sectionTitle}</motion.h1>
         <motion.span 
         variants={span}

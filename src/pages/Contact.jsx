@@ -1,10 +1,42 @@
 import React from 'react'
 import SectionTitle from '../components/SectionTitle'
 import {motion} from 'framer-motion'
-import { secondContainer, item } from '../animationVariants'
-import FixedIcons from '../components/FixedIcons'
+import { secondContainer, fourthContainer, item } from '../animationVariants'
+import { contactIconsArray } from '../textContent'
 
 function Contact() {
+
+  const textStyle = "w-full bg-gray-800/20 rounded border  focus:bg-gray-800/30 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+
+  function printEmailOrName(type, inputType){
+    return(
+      <motion.div 
+        variants={item}
+        className="relative mb-4"
+      >
+        <label htmlFor={type} className="leading-7 text-sm text-gray-400">
+          {type}
+        </label>
+        <input
+          type={inputType}
+          id={type}
+          name={type}
+          className={textStyle}
+        />
+      </motion.div>
+    )
+  }
+
+  const icons = contactIconsArray.map((iconObject, idx) => (
+    <motion.div
+      key={idx}
+      variants={item}
+      className='p-2 bg-slate-400 rounded-md text-[30px] text-slate-100'
+    >
+      {iconObject.icon}
+    </motion.div>
+  ))
+
   return (
     <div className='w-screen h-screen p-10'>
       <motion.div 
@@ -12,40 +44,22 @@ function Contact() {
         initial="hidden"
         whileInView="visible"
         viewport={{once: true}}
+        className='flex justify-center flex-col items-center max-w-[600px] mx-auto'
       >
         <SectionTitle sectionTitle={"contact"} />
+        <motion.div
+          variants={fourthContainer}
+          className='flex w-full mt-10 justify-evenly '
+        >
+          {icons}
+        </motion.div>
         <form
           name="contact"
-          className="max-w-[600px] m-auto flex flex-col mt-4 md:mt-8"
+          className="w-full flex flex-col mt-4 mx-10 md:mt-8"
           >
-            <motion.div 
-              variants={item}
-              className="relative mb-4"
-            >
-              <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full bg-gray-800/20 rounded border  focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </motion.div>
-            <motion.div 
-              variants={item}
-              className="relative mb-4"
-            >
-              <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full bg-gray-800/20 rounded border focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </motion.div>
+            {printEmailOrName("name", "text")}
+            {printEmailOrName("email", "email")}
+           
             <motion.div 
               variants={item}
               className="relative mb-4"
@@ -58,7 +72,7 @@ function Contact() {
               <textarea
                 id="message"
                 name="message"
-                className="w-full bg-gray-800/20 rounded border focus:bg-black h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                className={`${textStyle} h-32 resize-none leading-6 `}
               />
             </motion.div>
             <motion.button

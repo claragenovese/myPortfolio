@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
-import { BsGithub } from 'react-icons/bs'
-import { AiFillLinkedin, AiOutlineIdcard } from 'react-icons/ai'
-import { FaWhatsapp } from 'react-icons/fa'
+import { contactIconsArray } from '../textContent'
 import { motion } from 'framer-motion'
 import { secondContainer, item2 } from '../animationVariants'
 
 function FixedIcons() {
-    const iconsArray = [<BsGithub />, <AiFillLinkedin />, <FaWhatsapp />, <AiOutlineIdcard />]
-    const iconsNamesArray = ["GitHub", "Linkedin", "WhatsApp", "Resume"]
-
+    
     const [isHover, setIsHover] = useState(null)
 
     return (
@@ -20,8 +16,8 @@ function FixedIcons() {
             hidden md:flex flex-col gap-3 p-2 pl-2
             text-3xl bg-black/[.15] rounded-tr-xl'
         >
-            {iconsArray.map((item, id)=>(
-                <EachIcon key={id} icon={item} iconName={iconsNamesArray[id]} />
+            {contactIconsArray.map((item, id)=>(
+                <EachIcon key={id} icon={item.icon} iconName={item.name} />
             ))}
         </motion.div>
     )

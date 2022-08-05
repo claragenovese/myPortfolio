@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 import { FaBars } from 'react-icons/fa'
 import { IoIosClose } from 'react-icons/io'
 import { motion } from 'framer-motion'
-import { secondContainer, item } from '../animationVariants'
+import { secondContainer, firstContainer, item } from '../animationVariants'
 import { navTopics } from '../textContent'
 
 function Nav() {
@@ -12,12 +12,20 @@ function Nav() {
   const navItemsOffset = [-30, -30, -75, -150]
 
   const navItems = navTopics.map((navItem, idx) => (
-    <Link to={navItem} smooth={true} duration={500} offset={navItemsOffset[idx]}>
+    <Link 
+      key={idx}
+      to={navItem} 
+      smooth={true} 
+      duration={500} 
+      offset={navItemsOffset[idx]}
+    >
       <motion.li 
+      whileHover={{scale: 1.1}}
         variants={item}
         className='uppercase tracking-[3px] font-extralight text-xl lg:text-sm cursor-pointer
-        navItemBg py-1 px-3 rounded-md border-2 border-slate-400/20 
-        hover:border-slate-50/0'
+        py-1 px-3 rounded-md border-2 border-slate-400/20 
+        hover:border-slate-50/0
+        transition-all'
       >{navItem}</motion.li>
     </Link>
   ))
@@ -46,17 +54,22 @@ function Nav() {
       </div>
 
       {/* Mobile ul starts here */}
-      <div 
-        className={`block lg:hidden absolute -z-10 top-0 right-[-110%] w-screen h-screen sm:w-[400px]  
-        bg-black/[.85] transition-all 
-            ${isNavOpen ? "right-[0%]" : ""} `}
-      > 
-        <motion.ul 
-          className="flex flex-col mt-[50%] -translate-y-1/2 gap-8 font-bold"
-        >
-          {navItems}
-        </motion.ul>
-      </div>
+      { isNavOpen &&
+        <div 
+          className={`block lg:hidden absolute -z-10 top-0 right-[-110%] w-screen h-screen sm:w-[400px]  
+        p-4 transition-all bg-slate-100/[.95] 
+              ${isNavOpen ? "right-[0%]" : ""} `}
+        > 
+          <motion.ul 
+            variants={secondContainer}
+            initial="hidden"
+            animate="visible"
+            className="flex flex-col max-w-[250px] mx-auto mt-20 gap-8 font-bold"
+          >
+            {navItems}
+          </motion.ul>
+        </div>
+      }
     </nav>
   )
 }

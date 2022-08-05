@@ -37,7 +37,6 @@ export const secondContainer = {
     hidden: { },
     visible: {
       transition: {
-        delayChildren: 0.3,
         staggerChildren: 0.2
       }
   }
@@ -51,6 +50,15 @@ export const thirdContainer = {
     }
   }
 }
+
+export const fourthContainer = {
+  hidden: { },
+  visible: {
+    transition: {
+      staggerChildren: 0.05
+    }
+}
+};
   
 export const item = {
   hidden: { opacity: 0, y: 20 },
