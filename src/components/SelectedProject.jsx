@@ -24,7 +24,7 @@ export default function SelectedProject() {
             selectedId && !isClickedOut &&
             <motion.div  
                 className='fixed top-0 left-0 z-50 
-                w-screen max-h-screen flex justify-center p-10
+                w-screen h-screen flex justify-center p-10
                 overflow-x-hidden overflow-y-scroll
             bg-black/50'
             >

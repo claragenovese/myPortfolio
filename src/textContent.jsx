@@ -1,7 +1,15 @@
 import { ShowSkillsComponent } from './components/AboutFunctions'
 
+//import all images from the projects section
+import netflixBanner from './assets/netflix-banner.jpg'
+import netImg1 from './assets/netflix-img1.jpg'
+import netImg2 from './assets/netflix-img2.jpg'
+import netImg3 from './assets/netflix-img3.jpg'
+import netImg4 from './assets/netflix-img4.jpg'
 
-import netfliximg from './assets/netflix-img1.jpg'
+import wappBanner from './assets/wapp-banner.jpg'
+import wappImg1 from './assets/wapp-img1.jpg'
+import wappImg2 from './assets/wapp-img2.jpg'
 
 // import all icons from the page 
 import { BsGithub } from 'react-icons/bs'
@@ -122,12 +130,12 @@ export const projectsContent = [
     {
         name: "Netflix Clone",
         description: "lalalalalal",
-        bannerImg: "/src/assets/netflix-banner.jpg",
+        bannerImg: netflixBanner,
         slideImgs: [
-            netfliximg,
-            "src/assets/netflix-img2.jpg", 
-            "../../assets/netflix-img3.jpg",
-            "/assets/netflix-img4.jpg"
+            netImg1,
+            netImg2, 
+            netImg3,
+            netImg4
         ],
         deployUrl: "fir-netflix-970a4.web.app/",
         repo: "https://github.com/claragenovese/Netflix-Clone",
@@ -136,10 +144,10 @@ export const projectsContent = [
     {
         name: "Weather App",
         description: "lalalalalal",
-        bannerImg: "./assets/wapp-banner.jpg",
+        bannerImg: wappBanner,
         slideImgs: [
-            "./assets/wapp-img1.jpg", 
-            "./assets/wapp-img2.jpg"
+            wappImg1, 
+            wappImg2
         ],
         deployUrl: "fir-netflix-970a4.web.app/",
         repo: "https://github.com/claragenovese/Netflix-Clone",
