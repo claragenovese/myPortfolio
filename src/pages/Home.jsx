@@ -25,7 +25,7 @@ function Home() {
           />
         </h1>
       </motion.div>
-      {/* <Sphere /> */}
+      <Sphere />
       <div className='absolute  bottom-10 animate-arrow'>
         <Link to='about' smooth={true} offset={-30} duration={500}>
           <MdOutlineArrowForwardIos className='rotate-90 scale-[2]'/>

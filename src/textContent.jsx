@@ -120,12 +120,12 @@ export const projectsContent = [
     {
         name: "Netflix Clone",
         description: "lalalalalal",
-        bannerImg: "src/assets/netflix-banner.jpg",
+        bannerImg: "assets/netflix-banner.jpg",
         slideImgs: [
-            "src/assets/netflix-img1.jpg", 
-            "src/assets/netflix-img2.jpg", 
-            "src/assets/netflix-img3.jpg",
-            "src/assets/netflix-img4.jpg"
+            "assets/netflix-img1.jpg", 
+            "assets/netflix-img2.jpg", 
+            "assets/netflix-img3.jpg",
+            "assets/netflix-img4.jpg"
         ],
         deployUrl: "fir-netflix-970a4.web.app/",
         repo: "https://github.com/claragenovese/Netflix-Clone",
@@ -134,10 +134,10 @@ export const projectsContent = [
     {
         name: "Weather App",
         description: "lalalalalal",
-        bannerImg: "src/assets/wapp-banner.jpg",
+        bannerImg: "assets/wapp-banner.jpg",
         slideImgs: [
-            "src/assets/wapp-img1.jpg", 
-            "src/assets/wapp-img2.jpg"
+            "assets/wapp-img1.jpg", 
+            "assets/wapp-img2.jpg"
         ],
         deployUrl: "fir-netflix-970a4.web.app/",
         repo: "https://github.com/claragenovese/Netflix-Clone",
