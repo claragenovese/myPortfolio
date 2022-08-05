@@ -120,12 +120,12 @@ export const projectsContent = [
     {
         name: "Netflix Clone",
         description: "lalalalalal",
-        bannerImg: "./assets/netflix-banner.jpg",
+        bannerImg: "/src/assets/netflix-banner.jpg",
         slideImgs: [
-            "./assets/netflix-img1.jpg", 
-            "./assets/netflix-img2.jpg", 
-            "./assets/netflix-img3.jpg",
-            "./assets/netflix-img4.jpg"
+            "/assets/netflix-img1.jpg", 
+            "../assets/netflix-img2.jpg", 
+            "../../assets/netflix-img3.jpg",
+            "/assets/netflix-img4.jpg"
         ],
         deployUrl: "fir-netflix-970a4.web.app/",
         repo: "https://github.com/claragenovese/Netflix-Clone",
