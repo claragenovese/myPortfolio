@@ -1,5 +1,8 @@
 import { ShowSkillsComponent } from './components/AboutFunctions'
 
+
+import netfliximg from './assets/netflix-img1.jpg'
+
 // import all icons from the page 
 import { BsGithub } from 'react-icons/bs'
 import { AiFillLinkedin, AiOutlineIdcard } from 'react-icons/ai'
@@ -115,15 +118,14 @@ export const mensajeCallToAction2 = "You are at just one message of became your 
 
 
 // PROJECTS CONTENT
-
 export const projectsContent = [
     {
         name: "Netflix Clone",
         description: "lalalalalal",
         bannerImg: "/src/assets/netflix-banner.jpg",
         slideImgs: [
-            "/assets/netflix-img1.jpg", 
-            "../assets/netflix-img2.jpg", 
+            netfliximg,
+            "src/assets/netflix-img2.jpg", 
             "../../assets/netflix-img3.jpg",
             "/assets/netflix-img4.jpg"
         ],
