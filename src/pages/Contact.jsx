@@ -31,7 +31,8 @@ function Contact() {
     <motion.div
       key={idx}
       variants={item}
-      className='p-2 bg-slate-400 rounded-md text-[30px] text-slate-100'
+      whileHover={{scale: 1.05}}
+      className='p-2 bg-slate-400 rounded-md text-[30px] text-slate-100 hover:brightness-110'
     >
       {iconObject.icon}
     </motion.div>

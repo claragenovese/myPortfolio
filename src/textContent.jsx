@@ -143,7 +143,8 @@ export const projectsContent = [
     },
     {
         name: "Weather App",
-        description: "lalalalalal",
+        technoligies: "<React.js, React Context, Chart.js, Geoplugin, Frammer-Motion />",
+        description: "Web application that based on the geolocation of the user, shows the weather dependencies of the day, with a chart for the hourly forecast and predictions for the next two days. It is also possible to enter any desired place in the world, and according to the current temperature, the interface colors will change.",
         bannerImg: wappBanner,
         slideImgs: [
             wappImg1, 

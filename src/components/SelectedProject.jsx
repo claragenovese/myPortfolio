@@ -4,6 +4,7 @@ import { useIdContext } from '../Context';
 import { motion, AnimatePresence } from 'framer-motion'
 import ImageSliders from './ImageSliders';
 import { FaLink, FaCode } from 'react-icons/fa'
+import { AiOutlineCloseCircle } from 'react-icons/ai'
 import useOutsideClick from '../hooks/useOutsideClick';
 import SectionTitle from './SectionTitle';
 import { firstContainer, secondContainer, item, item2, thirdContainer, subTitle } from '../animationVariants';
@@ -24,7 +25,7 @@ export default function SelectedProject() {
             selectedId && !isClickedOut &&
             <motion.div  
                 className='fixed top-0 left-0 z-50 
-                w-screen h-screen flex justify-center p-10
+                w-screen h-screen flex justify-center items-center lg:items-baseline p-10
                 overflow-x-hidden overflow-y-scroll
             bg-black/50'
             >
@@ -33,14 +34,22 @@ export default function SelectedProject() {
                     initial="hidden"
                     animate="visible"
                     layoutId={selectedId}
-                    className=' bg-neutral-200 p-10 max-w-2xl h-fit
+                    className='bg-neutral-200 p-10 max-w-2xl h-fit
                     rounded-xl'
                     ref={wrapperRef}
                 >
                     <motion.div 
                         variants={firstContainer}
-                        className='flex justify-center items-center mb-8'
+                        className='relative flex justify-center items-center mb-8'
                     >
+                         
+                    <button 
+                        onClick={() => handleClick(null)}
+                        className='absolute -top-8 -right-7 opacity-50 text-[25px] hover:opacity-100'   
+                    > 
+                        <AiOutlineCloseCircle />
+                    </button>
+                   
                         <SectionTitle sectionTitle={projectsContent[selectedId - 1].name} titleAnimation={subTitle}/>
                         <motion.div
                             className='ml-auto flex'
@@ -63,11 +72,17 @@ export default function SelectedProject() {
                     <ImageSliders slidesArray={projectsContent[selectedId - 1].slideImgs} />
                     <motion.h2
                         variants={item}
-                    > Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, error et numquam placeat dicta amet cupiditate eligendi quis. Reprehenderit nulla eum optio ipsum quis tenetur omnis consequatur facere aliquam nam?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur soluta debitis voluptatum quos repellat distinctio iste quis aliquid repudiandae a corrupti ducimus obcaecati id quam fuga, consequuntur libero ratione nulla!
+                        className='p-5'
+                    > 
+                        {projectsContent[selectedId - 1].technoligies}
                     </motion.h2>
-                    <button onClick={() => handleClick(null)}> lala </button>
-                    </motion.div>
+                    <motion.h2
+                        variants={item}
+                        className='p-2 text-left'
+                    > 
+                       {projectsContent[selectedId - 1].description}
+                    </motion.h2>
+                </motion.div>
             </motion.div>
         }
       </AnimatePresence>
