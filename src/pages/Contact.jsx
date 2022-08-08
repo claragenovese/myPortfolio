@@ -8,9 +8,12 @@ function Contact() {
 
   const textStyle = "w-full bg-gray-800/20 rounded border  focus:bg-gray-800/30 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 
+  function redirectToLinkIcon(src){
+    window.location.href = src
+  }
+
   function printEmailOrName(type, inputType){
-    return(
-      <motion.div 
+      return (<motion.div 
         variants={item}
         className="relative mb-4"
       >
@@ -23,8 +26,7 @@ function Contact() {
           name={type}
           className={textStyle}
         />
-      </motion.div>
-    )
+      </motion.div>)
   }
 
   const icons = contactIconsArray.map((iconObject, idx) => (
@@ -32,6 +34,7 @@ function Contact() {
       key={idx}
       variants={item}
       whileHover={{scale: 1.05}}
+      onClick={() => redirectToLinkIcon(iconObject.src)}
       className='p-2 bg-slate-400 rounded-md text-[30px] text-slate-100 hover:brightness-110'
     >
       {iconObject.icon}

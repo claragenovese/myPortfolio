@@ -25,19 +25,6 @@ const divVariants = {
 
 const Accordion = ({ id, expanded, setExpanded }) => {
   const isOpen = id === expanded;
-  const staggerAnimationsEnd = 2000
-
-  // const openFirstHead = () => {
-  //   if(id === 0){
-  //     setExpanded(id)
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     openFirstHead()
-  //   }, [staggerAnimationsEnd])
-  // }, [])
 
   return (
     <motion.div 
@@ -95,7 +82,7 @@ export default function About(){
                 transition={{delay: 0.5}}
                 className='p-8 text-[20px] tracking-wide'
               > 
-                {aboutHeadArr.map(item => <h2>{item}</h2>)} 
+                {aboutHeadArr.map((item, idx) => <h2 key={idx}>{item}</h2>)} 
               </motion.div>
         }
         <motion.div 
@@ -103,7 +90,12 @@ export default function About(){
           variants={secondContainer}
         >
           {accordionIds.map((id) => (
-          <Accordion id={id} key={id} expanded={expanded} setExpanded={setExpanded} />
+            <Accordion 
+              id={id} 
+              key={id} 
+              expanded={expanded} 
+              setExpanded={setExpanded} 
+            />
         ))}
         </motion.div>
       </motion.div>

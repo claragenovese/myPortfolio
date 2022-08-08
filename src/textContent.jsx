@@ -129,7 +129,8 @@ export const mensajeCallToAction2 = "You are at just one message of became your 
 export const projectsContent = [
     {
         name: "Netflix Clone",
-        description: "lalalalalal",
+        technoligies: "<React.js, Firebase Auth, React Router, React Context, Swiper />",
+        description: "A clone of the netflix user interface, with login authentication that allows the user to save their favorite movies, and get detailed information about them when clicked.",
         bannerImg: netflixBanner,
         slideImgs: [
             netImg1,
@@ -164,18 +165,22 @@ export const contactIconsArray = [
     {
         icon: <BsGithub />,
         name: "GitHub",
+        src: "https://github.com/claragenovese"
     },
     {
         icon: <AiFillLinkedin />,
         name: "Linkedin",
+        src: "https://www.linkedin.com/in/clara-genovese-071627239/"
     },
     {
         icon: <FaWhatsapp />,
         name: "WhatsApp",
+        src: "https://wa.link/k5c5kz"
     },
     {
         icon: <AiOutlineIdcard />,
-        name:  "Resume"
+        name:  "Resume",
+        src: "https://drive.google.com/file/d/11K8TKz6NUM0DAfvZwnoWhSyD56YGV3tm/view?usp=sharing"
     },
 ]
 

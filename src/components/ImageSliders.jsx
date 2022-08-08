@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import { AnimatePresence, motion } from 'framer-motion'
-import { secondContainer, item } from "../animationVariants";
+import { secondContainer, item, item2 } from "../animationVariants";
 
 export default function ImageSliders({slidesArray}) {
   const [idxSlide, setIdxSlide] = useState(0)
@@ -35,7 +35,7 @@ export default function ImageSliders({slidesArray}) {
         <FiChevronLeft className={btnStyles}/>
       </motion.div>
       <motion.img 
-        variants={item}
+        variants={item2}
         src={slidesArray[idxSlide]} 
         className={`w-full aspect-[5/3] rounded-lg ${opacity ? 'opacity-0' : 'opacity-100'} transition-all`}
       />
