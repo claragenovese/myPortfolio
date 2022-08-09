@@ -68,6 +68,17 @@ textarea, select, input, button {
   background-size: contain;
 }
 
+.gradientText{
+  font-size: 72px;
+  background: -webkit-linear-gradient(#9a76af, #53809e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-shadow{
+  text-shadow: 3px 3px rgb(235, 235, 235);
+}
+
 .center-element{
   position: absolute;
   top: 50%;

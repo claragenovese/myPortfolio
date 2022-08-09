@@ -1,34 +1,83 @@
 import Sphere from '../components/Sphere'
 import React from 'react'
-import Typed from 'react-typed';
-import { motion } from 'framer-motion'
+import { animate, motion } from 'framer-motion'
 import { MdOutlineArrowForwardIos } from 'react-icons/md'
 import { Link } from 'react-scroll';
 
-//si tengo mas de una animación 3d puedo hacer del canvas un componente 
+const subTitleVariants = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
+    transition:{
+      delayChildren: 2.7,
+      staggerChildren: 0.07,
+    }
+  }
+}
+
+// const eachLetterVariants = {
+//   hidden: { 
+//     opacity: 0,
+//     y: "100%"
+//   },
+//   visible: {
+//     opacity:1,
+//     y: "0%",
+//     transition: {
+//       ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85}
+//   }
+// }
+
+const eachLetterVariants = {
+  hidden: {
+    opacity: 0,
+    y: "100%",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  }
+};
 
 function Home() {
+  const title = "CLARA GENOVESE"
+  const subTitle = "FRONT-END DEVELOPER"
+  const lol = subTitle.split('')
   return (
-    <div id="home" className='relative w-screen h-screen flex flex-col items-center justify-center p-10' >
-      <motion.div 
-        initial={{ opacity: 0}}
-        animate={{ opacity: 1}}
-        transition={{ duration: 3, delay: 0.3 }}
-        className='text-red relative z-10 center-element'
+    <div id="home" className='relative w-screen h-screen flex flex-col items-center justify-center' >
+      <Sphere />
+      <div 
+        className='relative z-10 w-full center-element text-slate-400'
       >
-        <h1 className='font-normal text-[50px] text-center'>
-          Hi, I'm <span className=' text-purple-300 font-semibold subpixel-antialiased'>Clara</span>
-          <br />
-          <Typed
-              strings={["Front-End Developer"]}
-              typeSpeed={70}
-          />
-        </h1>
-      </motion.div>
-      {/* <Sphere /> */}
-      <div className='absolute  bottom-10 animate-arrow'>
+        <div className='overflow-y-hidden'>
+          <motion.h1 
+            initial={{y: "200%"}}
+            animate={{y: '0%'}}
+            transition={{duration: 0.8, delay: 0.5}}
+            className='m-2 gradientText font-bold tracking-[10px] text-[30px] lg:text-[50px] text-center'
+          >
+            {title}
+          </motion.h1>
+        </div>
+        <motion.h3 
+          variants= {subTitleVariants}
+          initial='hidden'
+          animate='visible'
+          className='text-[15px] lg:text-[25px] tracking-[7px] text-shadow'
+        >
+          {lol.map((item, idx) => (
+            <motion.span
+              key={idx}
+              variants= {eachLetterVariants}
+            >{item}</motion.span>
+          ))}
+        </motion.h3>
+      </div>
+      <div className='absolute bottom-10 animate-arrow '>
         <Link to='about' smooth={true} offset={-30} duration={500}>
-          <MdOutlineArrowForwardIos className='rotate-90 scale-[2]'/>
+          <MdOutlineArrowForwardIos className='rotate-90 scale-[2] hover:scale-[3]'/>
         </Link>
       </div>
     </div>

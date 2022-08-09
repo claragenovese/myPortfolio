@@ -86,7 +86,7 @@ export default function About(){
               </motion.div>
         }
         <motion.div 
-          className='bg-slate-400/10 p-5 w-full inline-block rounded-md'
+          className='p-5 w-full inline-block rounded-md'
           variants={secondContainer}
         >
           {accordionIds.map((id) => (
