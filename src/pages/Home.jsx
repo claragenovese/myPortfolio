@@ -56,7 +56,7 @@ function Home() {
             initial={{y: "200%"}}
             animate={{y: '0%'}}
             transition={{duration: 0.8, delay: 0.5}}
-            className='m-2 gradientText font-bold tracking-[10px] text-[30px] lg:text-[50px] text-center'
+            className='mx-5 gradientText font-bold tracking-[10px] text-[30px] lg:text-[50px] text-center'
           >
             {title}
           </motion.h1>
@@ -65,7 +65,7 @@ function Home() {
           variants= {subTitleVariants}
           initial='hidden'
           animate='visible'
-          className='m-2 text-[15px] lg:text-[25px] tracking-[7px] text-shadow'
+          className='mx-5 mt-3 text-[15px] lg:text-[25px] tracking-[7px] text-shadow'
         >
           {lol.map((item, idx) => (
             <motion.span
