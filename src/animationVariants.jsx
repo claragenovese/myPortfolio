@@ -7,6 +7,15 @@ export const title = {
   }
 }
 
+export const aboutTitle = {
+  hidden: {scale: 0.9, opacity: 0},
+  visible: {
+    scale: 1, 
+    opacity: 1,
+    transition:{delay: 1.5, duration: 0.6}
+  }
+}
+
 export const subTitle = {
   hidden: { opacity: 0},
   visible: {
@@ -20,6 +29,16 @@ export const span = {
   visible:{
       left: "101%",
       transition: {type: "cubic-bezier(0.05, 0.97, 1, 0.07)", duration: 0.6}
+  }
+}
+
+export const aboutContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.5
+    }
   }
 }
 

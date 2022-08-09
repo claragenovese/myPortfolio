@@ -8,8 +8,8 @@ export default function SectionTitle({sectionTitle, titleAnimation}) {
         className='relative overflow-hidden inline-block justify-center items-center'
     >
         <motion.h1 
-        variants={titleAnimation ?? title}
-        className='text-[18px] md:text-[26px] tracking-[5px] border-b-2 uppercase'
+          variants={titleAnimation ?? title}
+          className='text-[18px] md:text-[26px] tracking-[5px] border-b-2 uppercase'
         >{sectionTitle}</motion.h1>
         <motion.span 
         variants={span}

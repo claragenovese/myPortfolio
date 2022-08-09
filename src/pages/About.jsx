@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from 'react';
 import SectionTitle from '../components/SectionTitle';
-import { firstContainer, secondContainer, item } from '../animationVariants';
+import { aboutContainer, aboutTitle, firstContainer, secondContainer, item } from '../animationVariants';
 
 const sectionVariants = {
   open: { 
@@ -62,24 +62,29 @@ const Accordion = ({ id, expanded, setExpanded }) => {
  
 export default function About(){
   const [expanded, setExpanded] = useState(false);
-  
+  const [aboutHeadDelay, setAboutHeadDelay] = useState(1.6)
+
+  useEffect(() => {
+    if(expanded) setAboutHeadDelay(0.3)
+  }, [expanded])
+
   return (
     <div id='about' className='w-screen min-h-screen p-12'>
       <motion.div 
-        variants={firstContainer}
+        variants={aboutContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{once: true, amount: 1}}
         className='max-w-[600px] m-auto'
       >
-        <SectionTitle sectionTitle={"About me"} />
+        <SectionTitle sectionTitle={"About me"} titleAnimation={aboutTitle}/>
         {
           expanded === false && 
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{delay: 0.5}}
+                transition={{delay: aboutHeadDelay}}
                 className='p-8 text-[20px] tracking-wide'
               > 
                 {aboutHeadArr.map((item, idx) => <h2 key={idx}>{item}</h2>)} 

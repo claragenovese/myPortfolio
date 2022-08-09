@@ -11,7 +11,7 @@ function FixedIcons() {
         <motion.div 
             initial={{opacity: 0}}
             animate={{opacity: 1}}
-            transition={{delay: 1.7}}
+            transition={{delay: 2.2}}
             className='fixed bottom-0 left-0 
             hidden md:flex flex-col gap-3 p-2 pl-2
             text-3xl bg-black/[.20] rounded-tr-xl'
