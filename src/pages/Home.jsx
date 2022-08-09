@@ -11,7 +11,7 @@ const subTitleVariants = {
   visible: {
     opacity: 1,
     transition:{
-      delayChildren: 2.7,
+      delayChildren: 2,
       staggerChildren: 0.07,
     }
   }
@@ -65,7 +65,7 @@ function Home() {
           variants= {subTitleVariants}
           initial='hidden'
           animate='visible'
-          className='text-[15px] lg:text-[25px] tracking-[7px] text-shadow'
+          className='m-2 text-[15px] lg:text-[25px] tracking-[7px] text-shadow'
         >
           {lol.map((item, idx) => (
             <motion.span
