@@ -35,7 +35,7 @@ function Contact() {
       variants={item}
       whileHover={{scale: 1.05}}
       onClick={() => redirectToLinkIcon(iconObject.src)}
-      className='p-2 bg-slate-400 rounded-md text-[30px] text-slate-100 hover:brightness-110'
+      className='p-2 bg-slate-400 rounded-md cursor-pointer text-[30px] text-slate-100 hover:brightness-110'
     >
       {iconObject.icon}
     </motion.div>

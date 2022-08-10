@@ -19,7 +19,7 @@ function Sphere() {
         <Canvas>
           <ambientLight intensity={0.8} />
           <spotLight position={[10, 15, 10]} angle={0.3} color='black' />
-          <OrbitControls autoRotate enableZoom={false} autoRotateSpeed={0.8} />
+          <OrbitControls autoRotate enableRotate={false} enableZoom={false} autoRotateSpeed={0.8} />
           <Octahedron  args={[4, 3]} smoothness={10} scale={2}>
             <meshToonMaterial wireframe>
               <GradientTexture

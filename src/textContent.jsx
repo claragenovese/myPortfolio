@@ -180,7 +180,7 @@ export const contactIconsArray = [
     {
         icon: <AiOutlineIdcard />,
         name:  "Resume",
-        src: "https://drive.google.com/file/d/1hD_MriHl_Phxw9OKQxHXkMRYEScL7gxA/view?usp=sharing"
+        src: "https://drive.google.com/file/d/1IxuUJOi7X_bMmAfdtlSykFlvhqRFQ7BK/view?usp=sharing"
     },
 ]
 
