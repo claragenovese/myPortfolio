@@ -45,14 +45,14 @@ function Nav() {
 
 
   return (
-    <nav ref={navMobRef} className='fixed w-full z-50 px-8 py-3 flex justify-between items-center bg-slate-600/[.05] backdrop-blur-md'>
+    <nav ref={navMobRef} className='fixed w-full z-50 px-8 py-2 flex justify-between items-center bg-slate-600/[.05] backdrop-blur-md'>
       
       <motion.div
-        // initial={{opacity: 0}}
-        // animate={{opacity: 1}}
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
         className='logoStyle text-[25px] font-semibold flex items-center'
       >
-        <img src={Logo} className='w-[50px] md:w-[70px] opacity-75' />
+        <img src={Logo} className='w-[35px] md:w-[50px] opacity-75' />
       </motion.div>
       <motion.ul 
         className="hidden lg:flex ml-auto gap-5 text-[14px]"
@@ -69,7 +69,7 @@ function Nav() {
       onClick={() => setIsNavOpen(prev => !prev)}>
         {isNavOpen ?
           <IoIosClose className='lg:hidden text-3xl z-50'/> : 
-          <FaBars className='lg:hidden text-3xl z-50'/>}
+          <FaBars className='lg:hidden text-[25px] z-50'/>}
       </div>
       <AnimatePresence>
       { isNavOpen && 
