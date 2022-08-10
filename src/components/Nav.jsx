@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-scroll'
+import Logo from '../assets/logo.png'
 import { FaBars, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import { IoIosClose } from 'react-icons/io'
 import { CgFormatSlash } from 'react-icons/cg'
@@ -51,7 +52,7 @@ function Nav() {
         // animate={{opacity: 1}}
         className='logoStyle text-[25px] font-semibold flex items-center'
       >
-        <img src='src/assets/logo.png' className='w-[50px] md:w-[70px] opacity-75' />
+        <img src={Logo} className='w-[50px] md:w-[70px] opacity-75' />
       </motion.div>
       <motion.ul 
         className="hidden lg:flex ml-auto gap-5 text-[14px]"
