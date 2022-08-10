@@ -11,7 +11,7 @@ const subTitleVariants = {
   visible: {
     opacity: 1,
     transition:{
-      delayChildren: 2,
+      delayChildren: 1.2,
       staggerChildren: 0.07,
     }
   }
@@ -42,7 +42,7 @@ function Home() {
           <motion.h1 
             initial={{y: "200%"}}
             animate={{y: '0%'}}
-            transition={{duration: 0.8, delay: 0.5}}
+            transition={{duration: 0.8, delay: 0.3}}
             className='mx-5 gradientText font-bold tracking-[10px] text-[30px] lg:text-[50px] text-center'
           >
             {title}
@@ -64,7 +64,7 @@ function Home() {
       </div>
       <div className='absolute bottom-10 animate-arrow '>
         <Link to='about' smooth={true} offset={-30} duration={500}>
-          <MdOutlineArrowForwardIos className='rotate-90 scale-[2] hover:scale-[3]'/>
+          <MdOutlineArrowForwardIos className='rotate-90 scale-[3] text-slate-500 hover:scale-[4] active:scale-[2] hover:brightness-[1.3] transition-all'/>
         </Link>
       </div>
     </div>
