@@ -62,11 +62,16 @@ function Home() {
           ))}
         </motion.h3>
       </div>
-      <div className='absolute bottom-10 animate-arrow '>
+      <motion.div 
+        initial={{opacity: 0, y: -20}}
+        animate={{opacity: 1, y: 0}}
+        transition={{delay: 2.7}}
+        className='absolute bottom-10 animate-arrow '
+      >
         <Link to='about' smooth={true} offset={-30} duration={500}>
           <MdOutlineArrowForwardIos className='rotate-90 scale-[3] text-slate-500 hover:scale-[4] active:scale-[2] hover:brightness-[1.3] transition-all'/>
         </Link>
-      </div>
+      </motion.div>
     </div>
   )
 }
