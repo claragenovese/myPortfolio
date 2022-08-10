@@ -11,6 +11,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -70,6 +74,14 @@ textarea, select, input, button {
 
 .gradientText{
   background: -webkit-linear-gradient(#9a76af, #53809e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logoStyle{
+  font-family: 'Bebas Neue' 'sans-serif';
+  font-weight: bold;
+  background: -webkit-linear-gradient(#b282ce, #679bbe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

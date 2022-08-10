@@ -138,8 +138,8 @@ export const projectsContent = [
             netImg3,
             netImg4
         ],
-        deployUrl: "fir-netflix-970a4.web.app/",
-        repo: "https://github.com/claragenovese/Netflix-Clone",
+        deployUrl: "https://fir-netflix-970a4.web.app/",
+        repoUrl: "https://github.com/claragenovese/Netflix-Clone",
         id: 1,
     },
     {
@@ -151,8 +151,8 @@ export const projectsContent = [
             wappImg1, 
             wappImg2
         ],
-        deployUrl: "fir-netflix-970a4.web.app/",
-        repo: "https://github.com/claragenovese/Netflix-Clone",
+        deployUrl: "https://weather-app-1-raip4yx2v-claragenovese.vercel.app/",
+        repoUrl: "https://github.com/claragenovese/Weather-App",
         id: 2,
     },
 ]
@@ -180,7 +180,7 @@ export const contactIconsArray = [
     {
         icon: <AiOutlineIdcard />,
         name:  "Resume",
-        src: "https://drive.google.com/file/d/11K8TKz6NUM0DAfvZwnoWhSyD56YGV3tm/view?usp=sharing"
+        src: "https://drive.google.com/file/d/1hD_MriHl_Phxw9OKQxHXkMRYEScL7gxA/view?usp=sharing"
     },
 ]
 

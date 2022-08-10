@@ -18,6 +18,9 @@ export default function SelectedProject() {
         handleClick(null)
     }, [isClickedOut])
     
+    function redirectToLinkIcon(src){
+        window.location.href = src
+    }
 
     return (
         <AnimatePresence>
@@ -43,12 +46,12 @@ export default function SelectedProject() {
                         className='relative flex justify-center items-center mb-8'
                     >
                          
-                    <button 
-                        onClick={() => handleClick(null)}
-                        className='absolute -top-8 -right-7 opacity-50 text-[25px] hover:opacity-100'   
-                    > 
-                        <AiOutlineCloseCircle />
-                    </button>
+                        <button 
+                            onClick={() => handleClick(null)}
+                            className='absolute -top-8 -right-7 opacity-50 text-[25px] hover:opacity-100'   
+                        > 
+                            <AiOutlineCloseCircle />
+                        </button>
                    
                         <SectionTitle sectionTitle={projectsContent[selectedId - 1].name} titleAnimation={subTitle}/>
                         <motion.div
@@ -56,12 +59,14 @@ export default function SelectedProject() {
                             variants={secondContainer}
                         >
                             <motion.div 
+                                onClick={() => redirectToLinkIcon(projectsContent[selectedId - 1].deployUrl)}
                                 variants={item2}
                                 className='p-3 ml-auto mr-3 rounded-lg cursor-pointer curso icons-style bg-black/10'
                             >
                                 <FaLink />
                             </motion.div>
-                            <motion.div 
+                            <motion.div
+                                onClick={() => redirectToLinkIcon(projectsContent[selectedId - 1].repoUrl)} 
                                 variants={item2}
                                 className='p-3 rounded-lg cursor-pointer icons-style bg-black/10'
                             >

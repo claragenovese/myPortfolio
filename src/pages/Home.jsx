@@ -17,19 +17,6 @@ const subTitleVariants = {
   }
 }
 
-// const eachLetterVariants = {
-//   hidden: { 
-//     opacity: 0,
-//     y: "100%"
-//   },
-//   visible: {
-//     opacity:1,
-//     y: "0%",
-//     transition: {
-//       ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85}
-//   }
-// }
-
 const eachLetterVariants = {
   hidden: {
     opacity: 0,
@@ -44,7 +31,7 @@ const eachLetterVariants = {
 function Home() {
   const title = "CLARA GENOVESE"
   const subTitle = "FRONT-END DEVELOPER"
-  const lol = subTitle.split('')
+  
   return (
     <div id="home" className='relative w-screen h-screen flex flex-col items-center justify-center' >
       {/* <Sphere /> */}
@@ -67,7 +54,7 @@ function Home() {
           animate='visible'
           className='mx-5 mt-3 text-[15px] lg:text-[25px] tracking-[7px] text-shadow'
         >
-          {lol.map((item, idx) => (
+          {subTitle.split("").map((item, idx) => (
             <motion.span
               key={idx}
               variants= {eachLetterVariants}
