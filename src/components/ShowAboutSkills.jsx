@@ -8,10 +8,9 @@ export function ShowAboutSkills({skillsArr, describeSkills}){
             variants={fourthContainer}
             initial="hidden"
             animate="visible"
-            className='w-full flex justify-center gap-12 flex-wrap
-            p-5 '
+            className='w-full flex justify-center gap-10 flex-wrap p-5'
         >
-            <h3>{describeSkills}</h3>
+            {describeSkills && <h3>{describeSkills}</h3>}
             {
                 skillsArr.map((eachIcon, idx) => (
                     <div 
@@ -22,13 +21,13 @@ export function ShowAboutSkills({skillsArr, describeSkills}){
                             variants={item}
                             whileHover={{rotate: 360}}
                             whileTap={{rotate: 360}}
-                            className='flex p-3 bg-slate-300 rounded-[35%]'
+                            className='flex p-3 bg-slate-100 rounded-[35%]'
                         >
                             {eachIcon.logo}
                         </motion.div>
                         <motion.h4 
                             variants={item}
-                            className='text-[14px] max-w-[150px] tracking-wide font-semibold'
+                            className='text-[14px] max-w-[150px] tracking-wide font-bold'
                         >{eachIcon.name}</motion.h4>
                     </div>
                 ))

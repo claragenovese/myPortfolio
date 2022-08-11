@@ -27,6 +27,13 @@ export default function EachAccordeon({ id, expandedId, setExpandedId }) {
         className='max-w-xl m-auto'
         variants={item}
       >
+        <motion.header
+          className={`text-white p-3 rounded-md my-2 w-full uppercase tracking-[2px] text-[14px] font-bold ${isOpen ? "openHead" : "closeHead hover:scale-[1.03] transition-transform"}  cursor-pointer`}
+          onClick={() => setExpandedId(isOpen ? false : id)}
+        >
+          {aboutHeaderTextArr[id].question}
+        </motion.header>
+        
         <AnimatePresence initial={false}>
           {isOpen && (
             <motion.section
@@ -46,12 +53,6 @@ export default function EachAccordeon({ id, expandedId, setExpandedId }) {
             </motion.section>
           )}
         </AnimatePresence>
-        <motion.header
-          className={`text-white p-3 rounded-md my-2 w-full uppercase tracking-[2px] text-[14px] font-bold ${isOpen ? "openHead" : "closeHead hover:scale-[1.03] transition-transform"}  cursor-pointer`}
-          onClick={() => setExpandedId(isOpen ? false : id)}
-        >
-          {aboutHeaderTextArr[id].question}
-        </motion.header>
       </motion.div>
     );
   };

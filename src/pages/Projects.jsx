@@ -22,7 +22,7 @@ function Projects() {
   ))
 
   return (
-    <div className={`w-screen min-h-screen p-12 mb-20`}>
+    <div className={`w-screen min-h-screen p-8 sm:p-10 lg:p-12`}>
       <motion.div id='projects' 
           variants={secondContainer}
           initial="hidden"

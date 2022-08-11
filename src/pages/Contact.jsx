@@ -42,7 +42,7 @@ function Contact() {
   ))
 
   return (
-    <div className='w-screen h-screen p-10'>
+    <div className='w-screen h-screen p-8 sm:p-10 lg:p-12'>
       <motion.div 
         variants={secondContainer}
         initial="hidden"

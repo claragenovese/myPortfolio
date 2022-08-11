@@ -30,7 +30,7 @@ export const navTopics = ["home", "about", "projects", "contact"]
 
 // ABOUT CONTENT 
 
-const iconsStyle = 'text-[20px]'
+const iconsStyle = 'text-[40px]'
 const techSkillsArr = [
     {
         logo: <FaReact className={`${iconsStyle} text-cyan-500 `}/>,

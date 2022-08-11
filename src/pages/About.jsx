@@ -14,7 +14,7 @@ export default function About(){
   }, [expandedId])
 
   return (
-    <div id='about' className='w-screen min-h-screen p-12'>
+    <div id='about' className='w-screen min-h-screen p-8 sm:p-10 lg:p-12'>
       <motion.div 
         variants={aboutContainer}
         initial="hidden"
@@ -24,7 +24,7 @@ export default function About(){
       >
         <SectionTitle sectionTitle={"About me"} titleAnimation={aboutTitle}/>
         
-        <motion.div
+       { expandedId === false && <motion.div
           id= 'head-text'
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -33,11 +33,11 @@ export default function About(){
           className='p-8 text-[20px] tracking-wide'
         > 
           {aboutHeadTextArr.map((item, idx) => <h2 key={idx}>{item}</h2>)} 
-        </motion.div>
+        </motion.div>}
         
         <motion.div 
           id='accordeons'
-          className='p-5 w-full inline-block rounded-md'
+          className='w-full inline-block rounded-md'
           variants={secondContainer}
         >
           {accordionIds.map((id) => (
