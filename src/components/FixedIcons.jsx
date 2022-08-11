@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { contactIconsArray } from '../textContent'
 import { motion } from 'framer-motion'
-import { secondContainer, item2 } from '../animationVariants'
 
 function FixedIcons() {
-    
-    const [isHover, setIsHover] = useState(null)
-
     return (
         <motion.div 
             initial={{opacity: 0}}

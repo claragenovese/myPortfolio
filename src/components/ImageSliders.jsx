@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
-import { AnimatePresence, motion } from 'framer-motion'
+import {  motion } from 'framer-motion'
 import { secondContainer, item, item2 } from "../animationVariants";
 
 export default function ImageSliders({slidesArray}) {
   const [idxSlide, setIdxSlide] = useState(0)
-  const [opacity, setOpacity] = useState(false) 
 
   const btnStyles = 'text-[35px] cursor-pointer hover:scale-125 active:scale-95 transition-all'
   
@@ -20,8 +19,6 @@ export default function ImageSliders({slidesArray}) {
     setIdxSlide(prev => prev - 1)
   }
 
-
-
   return (
     <motion.div 
       variants={secondContainer}
@@ -34,11 +31,13 @@ export default function ImageSliders({slidesArray}) {
       >
         <FiChevronLeft className={btnStyles}/>
       </motion.div>
+      
       <motion.img 
         variants={item2}
         src={slidesArray[idxSlide]} 
-        className={`w-full aspect-[5/3] rounded-lg ${opacity ? 'opacity-0' : 'opacity-100'} transition-all`}
+        className={`w-full aspect-[5/3] rounded-lg `}
       />
+      
       <motion.div
         variants={item}
         onClick={() => increaseSlide()}

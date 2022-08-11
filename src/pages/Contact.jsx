@@ -6,7 +6,7 @@ import { contactIconsArray } from '../textContent'
 
 function Contact() {
 
-  const textStyle = "w-full bg-gray-800/20 rounded border  focus:bg-gray-800/30 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+  const textStyle = "w-full bg-gray-800/20 rounded border focus:bg-gray-800/30 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 
   function redirectToLinkIcon(src){
     window.location.href = src
@@ -29,7 +29,7 @@ function Contact() {
       </motion.div>)
   }
 
-  const icons = contactIconsArray.map((iconObject, idx) => (
+  const contactIconst = contactIconsArray.map((iconObject, idx) => (
     <motion.div
       key={idx}
       variants={item}
@@ -51,12 +51,14 @@ function Contact() {
         className='flex justify-center flex-col items-center max-w-[600px] mx-auto'
       >
         <SectionTitle sectionTitle={"contact"} />
+       
         <motion.div
           variants={fourthContainer}
           className='flex w-full mt-10 justify-evenly '
         >
-          {icons}
+          {contactIconst}
         </motion.div>
+        
         <form
           name="contact"
           className="w-full flex flex-col mt-4 mx-10 md:mt-8"
