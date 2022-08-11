@@ -1,6 +1,6 @@
 import Sphere from '../components/Sphere'
 import React from 'react'
-import { animate, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { MdOutlineArrowForwardIos } from 'react-icons/md'
 import { Link } from 'react-scroll';
 
@@ -34,7 +34,8 @@ function Home() {
   
   return (
     <div id="home" className='relative w-screen h-screen flex flex-col items-center justify-center' >
-      {/* <Sphere /> */}
+      <Sphere />
+      
       <div 
         className='relative z-10 w-full center-element text-slate-400'
       >
@@ -48,6 +49,7 @@ function Home() {
             {title}
           </motion.h1>
         </div>
+        
         <motion.h3 
           variants= {subTitleVariants}
           initial='hidden'
@@ -62,6 +64,7 @@ function Home() {
           ))}
         </motion.h3>
       </div>
+     
       <motion.div 
         initial={{opacity: 0, y: -20}}
         animate={{opacity: 1, y: 0}}
