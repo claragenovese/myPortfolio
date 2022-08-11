@@ -34,7 +34,7 @@ function Home() {
   
   return (
     <div id="home" className='relative w-screen h-screen flex flex-col items-center justify-center' >
-      <Sphere />
+      {/* <Sphere /> */}
       <div 
         className='relative z-10 w-full center-element text-slate-400'
       >

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { fourthContainer, item } from '../animationVariants'
 
 
-export function ShowSkillsComponent({skillsArr, title}){
+export function ShowAboutSkills({skillsArr, describeSkills}){
     return (
         <motion.div 
             variants={fourthContainer}
@@ -11,9 +11,9 @@ export function ShowSkillsComponent({skillsArr, title}){
             className='w-full flex justify-center gap-12 flex-wrap
             p-5 '
         >
-            {title && <h3>{title}</h3>}
+            <h3>{describeSkills}</h3>
             {
-                skillsArr.map( (eachIcon, idx) => (
+                skillsArr.map((eachIcon, idx) => (
                     <div 
                         key={idx}
                         className='flex flex-col items-center'

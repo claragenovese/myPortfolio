@@ -1,4 +1,4 @@
-import { ShowSkillsComponent } from './components/AboutFunctions'
+import { ShowAboutSkills } from './components/ShowAboutSkills'
 
 //import all images from the projects section
 import netflixBanner from './assets/netflix-banner.jpg'
@@ -92,26 +92,26 @@ const softSkillsArr = [
         name: "Turn mistakes into learning opportunities"
     },
 ]
-// const softSkillsTitle = 'These are the main personal skills in wich i strive to improve daily'
-const softSkillsTitle = 'I strive to increase the value I can bring to work by constantly improving these core personal skills'
 
-export const aboutHeadArr = [
+const softSkillsText = 'I strive to increase the value I can bring to work by constantly improving these core personal skills'
+
+export const aboutHeadTextArr = [
     "Hi! I'm Clara, a front-end developer from Argentina!",
     "I really enjoy creating responsive, scalable and optimized websites that look amazing, and my main motivation is to see them get better and better as I improve my skills as a developer."
 ]
 
-export const about = [
+export const aboutHeaderTextArr = [
     {
         question: "How did I get here?",
         answear: `I learned the basics of programming in high school, and then merged it with electronics, creating awesome projects like a CNC Laser and an Automated Composter using arduino one. But I felt that my true passion was programming, so I enrolled in college to study systems engineering, and decided to specialize in the world of web development`
     },
     {
         question: "Technical Skills",
-        answear: <ShowSkillsComponent skillsArr={techSkillsArr} />
+        answear: <ShowAboutSkills skillsArr={techSkillsArr} />
     },
     {
         question: "Soft Skills",
-        answear: <ShowSkillsComponent skillsArr={softSkillsArr} title={softSkillsTitle} />
+        answear: <ShowAboutSkills skillsArr={softSkillsArr} describeSkills={softSkillsText} />
     }
 ]
 
