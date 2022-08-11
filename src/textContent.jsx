@@ -157,7 +157,7 @@ export const projectsContent = [
     },
 ]
 
-// PROJECTS CONTENT
+// END PROJECTS CONTENT
 
 // CONTACT CONTENT
 

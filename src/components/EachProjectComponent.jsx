@@ -4,14 +4,14 @@ import { useIdContext } from '../Context'
 import { item } from '../animationVariants'
 
 function EachProjectComponent({project}) {
-  const {handleClick} = useIdContext()
+  const {setSelectedProjectId} = useIdContext()
   return (
     <motion.div 
       variants={item}
       className="w-[300px] h-[170px] md:h-[180px] m-6 md:m-14 
                 relative flex justify-center items-center
                 group"  
-      onClick={() => handleClick(project.id)}    
+      onClick={() => setSelectedProjectId(project.id)}    
       layoutId={project.id} 
     >
       <img src={project.bannerImg} alt={project.name} 

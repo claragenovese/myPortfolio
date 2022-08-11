@@ -32,10 +32,10 @@ function App() {
       <Home />
       <About />
       <Projects />
+      <SelectedProject />
       <Contact /> 
       <Footer />
       {isScroll && <FixedIcons />}
-      <SelectedProject />
     </div>
   )
 }

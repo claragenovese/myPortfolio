@@ -1,22 +1,11 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {projectsContent} from '../textContent'
-import {motion, AnimatePresence} from 'framer-motion'
+import { motion } from 'framer-motion'
 import EachProjectComponent from '../components/EachProjectComponent'
 import SectionTitle from '../components/SectionTitle'
 import { secondContainer } from '../animationVariants'
 
-const firstContainer = {
-  hidden: {},
-  visible: {
-    transition: {
-      // delayChildren: 0.5,
-      staggerChildren: 1
-    }
-  }
-}
-
 function Projects() {
-
   const allProjects = projectsContent.map(project =>(
     <EachProjectComponent key={project.id} project={project}/>
   ))
@@ -29,11 +18,13 @@ function Projects() {
           whileInView="visible"
           viewport={{once: true, amount: 0.1}}
         >
+        
         <SectionTitle sectionTitle={"My projects"} />
+        
         <motion.div
           variants={secondContainer}
         >
-          <div id='prjects-container'
+          <div id='projects-container'
             className='flex items-center justify-center flex-col md:flex-row relative'
           >
             {allProjects}

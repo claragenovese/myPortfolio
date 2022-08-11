@@ -3,14 +3,10 @@ import React, { useContext, useState } from "react";
 const IdContext = React.createContext()
 
 function IdContextProvider({children}){
-    const [selectedId, setSelectedId] = useState(null)
-
-    function handleClick(id){
-        setSelectedId(id)
-    }
+    const [selectedProjectId, setSelectedProjectId] = useState(null)
 
     return (
-        <IdContext.Provider value={{selectedId, handleClick}}>
+        <IdContext.Provider value={{selectedProjectId, setSelectedProjectId}}>
             {children}
         </IdContext.Provider>
     )
