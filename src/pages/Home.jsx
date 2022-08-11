@@ -35,7 +35,7 @@ function Home() {
   return (
     <div id="home" className='relative w-screen h-screen flex flex-col items-center justify-center' >
       <Sphere />
-      
+      <div className='w-full h-full relative z-10'>
       <div 
         className='relative z-10 w-full center-element text-slate-400'
       >
@@ -69,12 +69,13 @@ function Home() {
         initial={{opacity: 0, y: -20}}
         animate={{opacity: 1, y: 0}}
         transition={{delay: 2.7}}
-        className='absolute bottom-10 animate-arrow '
+        className='absolute left-2/4 bottom-10 animate-arrow '
       >
         <Link to='about' smooth={true} offset={-30} duration={500}>
-          <MdOutlineArrowForwardIos className='rotate-90 scale-[3] text-slate-500 hover:scale-[4] active:scale-[2] hover:brightness-[1.3] transition-all'/>
+          <MdOutlineArrowForwardIos className='-translate-x-1/2 rotate-90 scale-[3] text-slate-500 hover:scale-[4] active:scale-[2] hover:brightness-[1.3] transition-all'/>
         </Link>
       </motion.div>
+      </div>    
     </div>
   )
 }
