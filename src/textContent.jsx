@@ -138,7 +138,7 @@ export const projectsContent = [
             netImg3,
             netImg4
         ],
-        deployUrl: "https://fir-netflix-970a4.web.app/",
+        deployUrl: "https://netflix-clone-optimized.vercel.app/",
         repoUrl: "https://github.com/claragenovese/Netflix-Clone",
         id: 1,
     },
